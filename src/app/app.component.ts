@@ -26,21 +26,45 @@ export class AppComponent {
       me.chart = new Chart('canvas', {
         type: 'line',
         data: {
-          labels: me.data.groups[0].peaks[0].eic.rt,
+          labels: me.data.groups[1].peaks[0].eic.rt,
           datasets: [
             {
-              label: me.data.groups[0].peaks[0].sampleName,
-              data: me.data.groups[0].peaks[0].eic.intensity,
-              borderColor: '#b9090b',
+              label: me.data.groups[1].peaks[0].sampleName,
+              data: me.data.groups[1].peaks[0].eic.intensity,
+              borderColor: '#008000',
               fill: true
             },
             {
-              label: me.data.groups[0].peaks[1].sampleName,
-              data: me.data.groups[0].peaks[1].eic.intensity,
-              borderColor: '#000080',
+              label: me.data.groups[1].peaks[1].sampleName,
+              data: me.data.groups[1].peaks[1].eic.intensity,
+              borderColor: '#800080',
               fill: true
             },
+            {
+              label: me.data.groups[1].peaks[2].sampleName,
+              data: me.data.groups[1].peaks[2].eic.intensity,
+              borderColor: '#FFD700',
+              fill: true
+            },
+
           ]
+        },
+        options: {
+          scales: {
+            xAxes: [{
+              scaleLabel: {
+                display: true,
+                labelString: 'rt'
+              }
+            }],
+
+            yAxes: [{
+              scaleLabel: {
+                display: true,
+                labelString: 'intensity'
+              }
+            }]
+          }
         }
       });
     }
