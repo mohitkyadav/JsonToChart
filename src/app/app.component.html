@@ -8,3 +8,8 @@ accept=".JSON"
 <textarea rows="10" cols="60">{{fileText}}</textarea>
 
 <hr>
+<div *ngIf="chart">
+  <canvas id="canvas">
+    {{chart}}
+  </canvas>
+</div>
