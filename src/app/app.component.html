@@ -1,9 +1,16 @@
-<hr>
-
-<input id="file-upload"
-type="file"
-accept=".JSON"
-(change)="fileUpload($event)">
+<div class="file">
+  <label class="file-label">
+    <input class="file-input is-success" type="file" name="file" accept=".JSON" (change)="fileUpload($event)">
+    <span class="file-cta">
+      <span class="file-icon">
+        <i class="fas fa-upload"></i>
+      </span>
+      <span class="file-label">
+        Choose a file…
+      </span>
+    </span>
+  </label>
+</div>
 
 <textarea rows="10" cols="60">{{fileText}}</textarea>
 
