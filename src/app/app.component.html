@@ -1,9 +1,9 @@
-<section class="hero is-bold">
+<section class="hero is-bold uk-animation-slide-top-medium">
   <div class="hero-body ws-orange-grad">
     <div class="columns is-desktop">
 
       <div class="column">
-        <div class="">
+        <div class="uk-animation-slide-left-medium">
           <h1 class="title">
             <img type="image/x-icon" width="60px" src="fav.svg"/>
             JSON to chart
@@ -14,9 +14,9 @@
         </div>
       </div>
 
-      <div class="column">
+      <div class="column uk-animation-slide-right-medium">
         <div class="file is-boxed is-primary">
-          <label class="file-label">
+          <label class="file-label uk-box-shadow-large uk-box-shadow-hover-medium">
             <input class="file-input" type="file" name="file" accept=".JSON" (change)="fileUpload($event)">
             <span class="file-cta">
               <span class="file-icon">
@@ -34,11 +34,56 @@
   </div>
 </section>
 
-<textarea rows="10" cols="60">{{fileText}}</textarea>
+<div *ngIf="data">
+  <div class="uk-margin-small-top tabs is-toggle is-toggle-rounded is-centered">
+    <ul>
+      <li class="is-active">
+        <a class="uk-link-heading">
+          <span class="icon is-small"><i class="fas fa-chart-area"></i></span>
+          <span>Chart</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <hr>
+</div>
 
-<hr>
-<div *ngIf="chart">
-  <canvas id="canvas">
+
+<div *ngIf="chart" class="uk-padding-medium">
+  <canvas id="canvas" width="150" height="70">
     {{chart}}
   </canvas>
+</div>
+
+<div *ngIf="data">
+  
+  <div class="uk-margin-small-top tabs is-toggle is-toggle-rounded is-centered">
+    <ul>
+      <li class="is-active">
+        <a class="uk-link-heading">
+          <span class="icon is-small"><i class="fas fa-file"></i></span>
+          <span>Uploaded Data</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  
+  <textarea class="uk-textarea" rows="10" cols="60">{{fileText}}</textarea>
+</div>
+
+<div *ngIf="!data">
+  
+    <section class="hero is-medium is-bold">
+        <div class="hero-body">
+          <div class="container">
+            <h1 class="title">
+              Click <a href="https://github.com/mohitkyadav/JsonToChart/blob/master/sample_data.json" target="_blank">here</a>
+              for sample data file.
+            </h1>
+            <h2 class="subtitle">
+              
+            </h2>
+          </div>
+        </div>
+      </section>
 </div>

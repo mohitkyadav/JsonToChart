@@ -40,6 +40,14 @@
           "labelString": "It's the Y axis"
         }
       }]
+    },
+    "layout": {
+      "padding": {
+        "left": 50,
+        "right": 50,
+        "top": 50,
+        "bottom": 50
+      }
     }
   }
 }
