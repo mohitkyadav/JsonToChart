@@ -2,7 +2,11 @@
     <img align="center" src="./src/fav.ico" alt="Jsontocart" width="150px"/>
 </p>
 
-# Jsontochart
+[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/uses-git.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/you-didnt-ask-for-this.svg)](https://forthebadge.com)
+
+# JSONToChart
 
 Chart and compare data.
 
