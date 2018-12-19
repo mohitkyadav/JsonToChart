@@ -1,13 +1,15 @@
 import { Component } from '@angular/core';
 import { Chart } from 'chart.js';
 
+declare var require: any;
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.sass']
 })
 export class AppComponent {
-
+  public LOGO = require('./../assets/fav.svg');
   chart = [];
   fileText;
   data;
