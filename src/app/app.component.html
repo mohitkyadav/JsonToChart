@@ -1,11 +1,11 @@
 <section class="hero is-bold uk-animation-slide-top-medium">
-  <div class="hero-body ws-orange-grad">
+  <div class="hero-body ws-orange-grad uk-box-shadow-small">
     <div class="columns is-desktop">
 
       <div class="column">
         <div class="uk-animation-slide-left-medium">
           <h1 class="title">
-            <img type="image/x-icon" width="60px" src="fav.svg"/>
+            <img type="image/x-icon" width="60px" src="./../assets/fav.svg"/>
             JSON to chart
           </h1>
           <h2 class="subtitle">
@@ -49,7 +49,7 @@
 </div>
 
 
-<div *ngIf="chart" class="uk-padding-medium">
+<div *ngIf="chart">
   <canvas id="canvas" width="150" height="70">
     {{chart}}
   </canvas>
@@ -69,6 +69,7 @@
   </div>
   
   <textarea class="uk-textarea" rows="10" cols="60">{{fileText}}</textarea>
+
 </div>
 
 <div *ngIf="!data">
@@ -79,9 +80,6 @@
           Click <a href="https://github.com/mohitkyadav/JsonToChart/blob/master/sample_data.json" target="_blank">here</a>
           for sample data file.
         </h1>
-        <h2 class="subtitle">
-          
-        </h2>
       </div>
     </div>
   </section>
