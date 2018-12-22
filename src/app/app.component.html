@@ -56,7 +56,7 @@
 </div>
 
 <div *ngIf="data">
-  
+
   <div class="uk-margin-small-top tabs is-toggle is-toggle-rounded is-centered">
     <ul>
       <li class="is-active">
@@ -67,8 +67,10 @@
       </li>
     </ul>
   </div>
-  
-  <textarea class="uk-textarea" rows="10" cols="60">{{fileText}}</textarea>
+
+  <div class="uk-padding-small">
+    <textarea class="uk-textarea uk-box-shadow-large uk-border-rounded" rows="10" cols="60">{{fileText}}</textarea>
+  </div>
 
 </div>
 
